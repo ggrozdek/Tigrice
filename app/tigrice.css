@@ -1,0 +1,114 @@
+/* Društvo Tigrice: bright surfaces, purple ink and a restrained scratch motif. */
+:root,.dark{
+ color-scheme:light;
+ --tiger-ink:#381052;
+ --tiger-purple:#8034c5;
+ --tiger-light:#f3e9fc;
+ --background:#fbf7ff;
+ --foreground:#321442;
+ --card:#fefcff;
+ --card-foreground:var(--foreground);
+ --popover:var(--card);
+ --popover-foreground:var(--foreground);
+ --primary:var(--tiger-purple);
+ --primary-foreground:#fefaff;
+ --secondary:#f0e4fb;
+ --secondary-foreground:var(--tiger-ink);
+ --muted:#f2e9fa;
+ --muted-foreground:#6f537f;
+ --accent:#efddff;
+ --accent-foreground:#542176;
+ --border:#e4d3ef;
+ --input:#d6bfe6;
+ --ring:#924bd0;
+ --radius:.8rem;
+ --chart-1:#9146c7;
+ --chart-2:#b37add;
+ --chart-3:#5b267d;
+ --chart-4:#cca4e9;
+ --chart-5:#9d69b7;
+}
+body{background-color:var(--background);background-image:linear-gradient(120deg,transparent 98.9%,#eadef5 99%);background-size:150px 340px;background-attachment:scroll}
+.topbar{position:relative;height:90px;border-bottom:1px solid #dac2ed;background:#fefbff}
+.topbar::after{content:"";position:absolute;bottom:0;left:0;right:0;height:4px;background:repeating-linear-gradient(118deg,#4b176b 0 22px,#9652cc 22px 47px,#eddbfa 47px 55px);pointer-events:none}
+.brand{gap:13px;letter-spacing:0;align-items:center}
+.brand-mark{width:54px;height:54px;border:1px solid #d4b3e9;border-radius:16px 10px 16px 10px;background:#eee0fa;transform:rotate(-5deg);overflow:hidden}
+.brand-mark img{width:100%;height:100%;object-fit:contain;transform:scale(1.16);mix-blend-mode:multiply}
+.brand-wordmark{display:flex;flex-direction:column;line-height:1.03}
+.brand-name{font-size:32px;letter-spacing:-1.5px;font-weight:850;font-style:italic;color:var(--tiger-ink)}
+.brand-note{display:block!important;margin:7px 0 0 2px;font-size:10px;letter-spacing:1.8px;font-weight:650;color:#78548d}
+.location{gap:13px;color:#6e4385;font-size:13px}
+.avatar{background:#eee0fa;border-color:#d8b6ee;color:#58237a;font-weight:750;transform:rotate(4deg)}
+.shell{padding-top:30px}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:28px;position:relative;padding:27px 30px;background:#efdefc;border:1px solid #ddbfef;border-radius:24px 12px 24px 12px;overflow:hidden;margin-bottom:26px;isolation:isolate}
+.intro::after{content:"";position:absolute;right:-75px;top:-100px;width:240px;height:420px;border:1px solid #713294;transform:rotate(30deg);opacity:.28;pointer-events:none;z-index:-1}
+.intro-copy{position:relative;min-width:0}
+.intro .eyebrow{font-size:11px;letter-spacing:1.9px;color:#754292;margin-bottom:11px;font-weight:750}
+.intro h1{font-size:clamp(26px,2.7vw,36px);font-weight:780;letter-spacing:-1.2px;line-height:1.2;color:var(--tiger-ink)}
+.intro .muted{color:#704084;margin-top:10px;font-size:14px}
+.tiger-art{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;align-self:center}
+.tiger-art img{display:block;width:170px;height:110px;object-fit:contain;mix-blend-mode:multiply;transform:rotate(-7deg)}
+.season{font-size:11px;letter-spacing:1px;color:#693a83;font-weight:650;background:#f8f0ff;border:1px solid #dabeea;padding:4px 10px;border-radius:20px;transform:rotate(-3deg)}
+.green-dot{background:#8f43c3}
+.main-tabs{gap:8px!important;height:auto!important;padding:0 0 14px!important;border-bottom:1px solid #e3ceef;margin-bottom:26px}
+.main-tabs button{height:43px;padding:0 16px!important;border-radius:12px!important;font-weight:600;color:#755387;transition:background .18s,color .18s,transform .18s}
+.main-tabs button:hover{background:#f0e1fb!important;color:var(--tiger-ink)}
+.main-tabs button[data-active]{background:var(--tiger-ink)!important;color:#fdf7ff!important;box-shadow:none!important}
+.main-tabs button[data-active] .count{background:#643281;color:#f7eaff}
+.count{background:#ead9f7;color:#693986}
+.settings{border-color:#ddc6eb;border-radius:20px 12px 20px 12px;box-shadow:0 7px 22px #47106305}
+.settings>.eyebrow,.plan-heading .eyebrow{color:#8947b0;font-weight:750}
+.settings h2{color:#4d1b66;font-weight:720}
+.primary{border-radius:11px;background:#8034c5;border:1px solid #7427b5;box-shadow:0 3px 0 #551b80;transition:background .16s,transform .16s,box-shadow .16s}
+.primary:hover{background:#7126b4}
+.primary:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #551b80}
+.primary:disabled{box-shadow:none}
+.secondary{border-radius:10px;color:#643082;border-color:#dec6ed}
+.secondary:hover{background:#f0e0fc}
+.settings>.primary{padding-top:13px;padding-bottom:13px;font-size:15px}
+.manual-start{color:#794499}
+.check-chip{border-radius:9px;border-color:#e1cbed}
+.check-chip.selected,.quick-times .active{background:#edd8ff;border-color:#c89ae8;color:#60218b}
+input,textarea,.choice-trigger{border-radius:10px!important}
+input:focus,textarea:focus{border-color:#9a55cd;box-shadow:0 0 0 3px #ecdcf8}
+.title-input{color:#43175a;font-weight:730;box-shadow:none!important}
+.duration{background:#ecdcf9;border-color:#d4b2e9;color:#59247b;border-radius:12px}
+.date-label{color:#795089}
+.timebar{height:11px;border-radius:7px;gap:4px}
+.legend{font-size:12px}
+.block{border-color:#e1cbed;border-radius:16px 9px 16px 9px}
+.block-heading{background:#efe0fa;border-color:#e0c7ee;padding-top:13px;padding-bottom:13px}
+.block-heading h3{color:#572077;font-weight:710}
+.block-number{display:grid;place-items:center;min-width:29px;height:29px;background:#dcc0ef;border:1px solid #cda5e6;border-radius:8px 4px 8px 4px;color:#612b81;font-size:12px;font-weight:750;transform:rotate(-4deg)}
+.block-heading>span:last-child{color:#775087;font-weight:600}
+.exercise-title h4{color:#452153;font-weight:600}
+.row-actions .icon-button:hover{background:#ecd8fb;color:#72309d}
+.replace-button{background:#f0e0fc;color:#702f9c;border-radius:7px}
+.replace-button:hover{background:#e6cdf9}
+.add-row{background:#fcf7ff;color:#80519a;border-color:#dfc7ed}
+.add-row:hover{background:#f2e4fc;color:#5f247f}
+.plan-brief{color:#745080}
+.plan-brief summary{border-color:#e2ccef}
+.budget{color:#865329}
+.preference-choice.favorite .choice-trigger{background:#f3e2fe;border-color:#d7afec;color:#752b98}
+.preference-choice.always .choice-trigger{background:#e7cef9;border-color:#bf8dde;color:#58217b}
+.preference-choice.always .choice-trigger,.preference-choice.favorite .choice-trigger{font-weight:600}
+.saved-list,.library-list,.group-list{border-radius:18px 10px 18px 10px;border-color:#dfc7ed}
+.saved-date,.group-avatar{background:#ecd7fa;border-color:#d6afea;color:#703595;border-radius:14px 7px 14px 7px}
+.saved-date{transform:rotate(-3deg)}
+.library-row:hover{background:#fdf8ff}
+.category-tag{border-radius:12px 6px 12px 6px;color:#431455;font-weight:750}
+.mini-label{color:#84539d;font-size:11px;font-weight:650}
+.exercise-form{background:#fbf4ff;border-color:#d9bae9;border-radius:16px}
+.add-picker{background:#fcf5ff}
+.empty{border-color:#d5b4e8;background:#fcf7ff;border-radius:22px 12px 22px 12px}
+.empty h2,.empty h3{color:#612880}
+.empty>svg{color:#a65cd1}
+.footer-note{color:#80638c}
+@media(min-width:1500px){.shell{position:relative}.shell::before{content:"";position:absolute;width:3px;left:26px;top:250px;bottom:110px;background:#d9bbe9;transform:rotate(1deg);pointer-events:none}}
+@media(max-width:1000px){.intro{grid-template-columns:minmax(0,1fr) 140px;gap:18px;padding:24px}.tiger-art img{width:140px;height:100px}.brand-note{font-size:9px}.main-tabs button{padding:0 12px!important}}
+@media(max-width:760px){.topbar{height:80px}.brand-mark{width:44px;height:44px}.brand-name{font-size:28px}.brand-note{font-size:8px;letter-spacing:1.5px}.location{font-size:0}.avatar{font-size:12px}.shell{padding-top:20px}.intro{grid-template-columns:minmax(0,1fr) 82px;gap:9px;padding:22px 18px;border-radius:20px 10px 20px 10px}.intro h1{font-size:26px;letter-spacing:-.8px}.intro .eyebrow{font-size:9px;letter-spacing:1.2px}.intro .muted{font-size:13px}.tiger-art img{width:91px;height:101px}.season{display:none}.main-tabs{gap:5px!important}.main-tabs button{font-size:13px;padding:0 12px!important}.main-tabs button svg{display:none}.plan-heading{gap:12px}}
+@media(prefers-reduced-motion:reduce){.primary,.main-tabs button{transition:none}.primary:active:not(:disabled){transform:none}}
+.settings{position:relative}.settings::after{content:"";position:absolute;top:12px;right:12px;width:52px;height:42px;background:url('/tigrice-praske.png') center/contain no-repeat;opacity:.1;pointer-events:none}.block-heading::after{content:"";display:block;flex:none;width:25px;height:25px;background:url('/tigrice-praske.png') center/contain no-repeat;opacity:.28;pointer-events:none}
+
+.training-balance{padding:16px;background:#f6ebfd;border:1px solid #dfc7ed;border-radius:14px;margin:8px 0}.training-balance input[type=range]{width:100%;height:36px;padding:0;border:0;background:transparent;accent-color:#813eb0;cursor:pointer}.training-balance .quick-times{flex-wrap:wrap}.training-balance label{font-size:13px;font-weight:650;color:#612880}.training-balance .helper{margin-bottom:0}.exercise-form .field-label{margin-top:12px}
